@@ -26,6 +26,10 @@ Comandos para essa aplicação:
 
 - npm install @nestjs/serve-static
 
+- npm install @nestjs/microservices
+
+- npm install @nestjs/microservices amqplib
+
 E por fim para rodar o projeto:
 
 - npm run start:dev
