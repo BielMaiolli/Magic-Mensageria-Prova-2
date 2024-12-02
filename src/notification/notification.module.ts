@@ -3,6 +3,6 @@ import { NotificationGateway } from './notification.gateway';
 
 @Module({
   providers: [NotificationGateway],
-  exports: [NotificationGateway], // Exportar o NotificationGateway para outros módulos
+  exports: [NotificationGateway], 
 })
 export class NotificationModule {}
