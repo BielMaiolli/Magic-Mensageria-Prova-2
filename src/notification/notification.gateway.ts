@@ -8,7 +8,7 @@ import { Server } from 'socket.io';
 
 @WebSocketGateway({
   cors: {
-    origin: '*', // Permitir conexões de qualquer origem
+    origin: '*', 
   },
 })
 export class NotificationGateway implements OnGatewayConnection, OnGatewayDisconnect {
