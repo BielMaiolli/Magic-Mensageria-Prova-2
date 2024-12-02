@@ -6,6 +6,7 @@ import { DeckSchema } from './schemas/deck.schema';
 import { AuthModule } from '../auth/auth.module';
 import { CacheModule } from '@nestjs/cache-manager';
 import { RabbitMQModule } from 'src/common/rabbitmq.module';
+import { NotificationModule } from '../notification/notification.module';
 
 @Module({
   imports: [
@@ -15,7 +16,9 @@ import { RabbitMQModule } from 'src/common/rabbitmq.module';
     }),
     AuthModule,
     RabbitMQModule,
-    MongooseModule.forFeature([{name: 'Deck', schema: DeckSchema}])],
+    NotificationModule, // Importa corretamente o NotificationModule
+    MongooseModule.forFeature([{ name: 'Deck', schema: DeckSchema }]),
+  ],
   controllers: [DeckController],
   providers: [DeckService],
 })
